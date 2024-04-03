@@ -11,6 +11,15 @@ public class Alumno {
         return materiasAprobadas;
     }
 
+    public Boolean cumpleCorrelatividad(List<Materia> materiasCorrelativas) {
+
+        if(materiasCorrelativas.isEmpty()){
+            return true;
+
+        }
+        return materiasAprobadas.containsAll(materiasCorrelativas);
+    }
+
 
     public Alumno(String nombre, List<Materia> materiasAprobadas) {
         this.nombre = nombre;

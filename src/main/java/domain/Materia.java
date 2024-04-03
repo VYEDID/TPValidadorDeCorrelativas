@@ -7,13 +7,8 @@ public class Materia {
     private String nombre;
     private List<Materia> materiasCorrelativas;
 
-    public Boolean cumpleCorrelatividad(List<Materia> materiasAprobadas) {
-
-        if(materiasCorrelativas.isEmpty()){
-            return true;
-
-        }
-       return materiasAprobadas.containsAll(materiasCorrelativas);
+    public List<Materia> getMateriasCorrelativas() {
+        return materiasCorrelativas;
     }
 
     //Para Test
